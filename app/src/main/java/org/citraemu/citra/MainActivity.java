@@ -12,14 +12,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import org.citraemu.citra.adapter.GameListAdapter;
+import org.citraemu.citra.bean.Game;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private AdView mAdView;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +67,17 @@ public class MainActivity extends AppCompatActivity
 
         // Start loading the ad in the background.
         mAdView.loadAd(adRequest);
+
+        this.listView = (ListView) findViewById(R.id.game_list);
+
+        List items = new ArrayList();
+        Game game = new Game();
+        game.setImage(R.mipmap.ic_launcher);
+        game.setTitle("Dumb game object");
+        game.setSize(0.0);
+        items.add(game);
+
+        this.listView.setAdapter(new GameListAdapter(this, items));
     }
 
     @Override

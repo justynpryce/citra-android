@@ -4,15 +4,15 @@ import android.graphics.drawable.Drawable;
 
 public class Game {
 
-    private Drawable image;
+    private int image;
     private String title;
     private double size;
 
-    public Drawable getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(Drawable image) {
+    public void setImage(int image) {
         this.image = image;
     }
 

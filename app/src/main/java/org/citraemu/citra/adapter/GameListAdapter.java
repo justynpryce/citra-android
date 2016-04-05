@@ -1,7 +1,6 @@
 package org.citraemu.citra.adapter;
 
 import android.content.Context;
-import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,7 +58,7 @@ public class GameListAdapter extends BaseAdapter {
         Game item = this.items.get(position);
         tvTitle.setText(item.getTitle());
         tvSize.setText(Double.toString(item.getSize()));
-        ivItem.setImageDrawable(item.getImage());
+        ivItem.setImageResource(item.getImage());
 
         return rowView;
     }
