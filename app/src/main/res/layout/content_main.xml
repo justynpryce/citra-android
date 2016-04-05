@@ -17,5 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"></LinearLayout>
+        android:layout_alignParentEnd="true"
+        android:id="@+id/game_list"></LinearLayout>
 </RelativeLayout>
