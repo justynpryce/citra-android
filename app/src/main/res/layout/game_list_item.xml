@@ -32,7 +32,7 @@
             android:id="@+id/play_button"
             android:src="@android:drawable/ic_media_play"
             android:contentDescription="@string/play"
-            android:layout_alignBottom="@+id/game_icon"
+            android:layout_alignBottom="@+id/game_size"
             android:layout_alignParentEnd="true" />
 
         <TextView
