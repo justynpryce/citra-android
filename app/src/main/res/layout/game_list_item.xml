@@ -4,8 +4,8 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:id="@+id/item">
 
         <ImageView
@@ -27,13 +27,15 @@
             android:layout_toEndOf="@+id/game_icon" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:id="@+id/play_button"
-            android:src="@android:drawable/ic_media_play"
+            android:src="@drawable/ic_game_play"
             android:contentDescription="@string/play"
             android:layout_alignBottom="@+id/game_size"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
