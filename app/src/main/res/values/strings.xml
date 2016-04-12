@@ -11,4 +11,7 @@
     <string name="play">Play</string>
     <string name="icon">Icon</string>
     <string name="banner_ad_unit_id">ca-app-pub-9704087139792305/7806618673</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

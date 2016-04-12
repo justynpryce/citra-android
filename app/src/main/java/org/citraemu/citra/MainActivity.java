@@ -1,5 +1,6 @@
 package org.citraemu.citra;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,15 +20,20 @@ import com.google.android.gms.ads.AdView;
 
 import org.citraemu.citra.adapter.GameListAdapter;
 import org.citraemu.citra.bean.Game;
+import org.citraemu.citra.fragment.AboutFragment;
+import org.citraemu.citra.fragment.MainFragment;
+import org.citraemu.citra.fragment.SettingsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        MainFragment.OnFragmentInteractionListener,
+        SettingsFragment.OnFragmentInteractionListener,
+        AboutFragment.OnFragmentInteractionListener {
 
     private AdView mAdView;
-    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,16 +74,9 @@ public class MainActivity extends AppCompatActivity
         // Start loading the ad in the background.
         mAdView.loadAd(adRequest);
 
-        this.listView = (ListView) findViewById(R.id.game_list);
+        MainFragment mainFragment = new MainFragment();
+        getFragmentManager().beginTransaction().replace(R.id.content_frame, mainFragment).commit();
 
-        List items = new ArrayList();
-        Game game = new Game();
-        game.setImage(R.mipmap.ic_launcher);
-        game.setTitle("Dumb game object");
-        game.setSize(0.0);
-        items.add(game);
-
-        this.listView.setAdapter(new GameListAdapter(this, items));
     }
 
     @Override
@@ -118,8 +117,19 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_manage) {
-
+        switch (item.getItemId()) {
+            case R.id.nav_games:
+                MainFragment mainFragment = new MainFragment();
+                getFragmentManager().beginTransaction().replace(R.id.content_frame, mainFragment).commit();
+                break;
+            case R.id.nav_manage:
+                SettingsFragment settingsFragment = new SettingsFragment();
+                getFragmentManager().beginTransaction().replace(R.id.content_frame, settingsFragment).commit();
+                break;
+            case R.id.nav_about:
+                AboutFragment aboutFragment = new AboutFragment();
+                getFragmentManager().beginTransaction().replace(R.id.content_frame, aboutFragment).commit();
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -152,5 +162,10 @@ public class MainActivity extends AppCompatActivity
             mAdView.destroy();
         }
         super.onDestroy();
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
