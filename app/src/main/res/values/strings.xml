@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Citra</string>
+    <string name="title_activity_main">Citra</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="drawable_title">Citra</string>
+    <string name="drawable_subtitle">Citra Emu</string>
+    <string name="play">Play</string>
+    <string name="icon">Icon</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9704087139792305/7806618673</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
