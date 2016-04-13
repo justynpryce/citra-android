@@ -24,8 +24,6 @@ public class SettingsFragment extends Fragment implements OnItemSelectedListener
 
     private OnFragmentInteractionListener mListener;
 
-    private View view;
-
     public SettingsFragment() {
         // Required empty public constructor
     }
@@ -39,7 +37,7 @@ public class SettingsFragment extends Fragment implements OnItemSelectedListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_settings, container, false);
+        View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
         Spinner spinner = (Spinner) view.findViewById(R.id.region_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
