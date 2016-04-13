@@ -16,4 +16,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logo">Logo</string>
     <string name="version">v.1.0.0.ALPHA</string>
+    <string name="settings_region">Region:</string>
+
+    <string-array name="region_array">JPN
+        <item>USA</item>
+        <item>EUR</item>
+        <item>AUS</item>
+        <item>CHN</item>
+        <item>KOR</item>
+        <item>TWN</item>
+    </string-array>
 </resources>
