@@ -15,6 +15,7 @@ model {
 
         ndk {
             moduleName "Citra"
+            toolchain "clang"
             ldLibs.addAll(["log", "GLESv2"])
         }
 
