@@ -37,6 +37,7 @@
     <string name="button_c_pad_left">C-Pad Left</string>
     <string name="button_c_pad_right">C-Pad Right</string>
     <string name="button_c_pad_down">C-Pad Down</string>
+    <string name="button_touch">Touch</string>
 
     <string-array name="region_array">
         <item>JPN</item>

@@ -15,6 +15,15 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_touch"
+            android:src="@drawable/ic_touch"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/button_touch" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
