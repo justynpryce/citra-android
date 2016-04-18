@@ -38,7 +38,8 @@
     <string name="button_c_pad_right">C-Pad Right</string>
     <string name="button_c_pad_down">C-Pad Down</string>
 
-    <string-array name="region_array">JPN
+    <string-array name="region_array">
+        <item>JPN</item>
         <item>USA</item>
         <item>EUR</item>
         <item>AUS</item>
