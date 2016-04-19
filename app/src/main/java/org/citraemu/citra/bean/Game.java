@@ -1,7 +1,5 @@
 package org.citraemu.citra.bean;
 
-import android.graphics.drawable.Drawable;
-
 public class Game {
 
     private int image;

@@ -1,16 +1,9 @@
-// Copyright 2016 Citra Emulator Project
-// Licensed under GPLv2 or any later version
-// Refer to the license.txt file included.
-
 package org.citraemu.citra;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.WindowManager;
-
-import java.io.File;
-
+import android.view.View;
+import android.view.ViewGroup;
 
 public class CitraActivity extends Activity {
 
@@ -20,6 +13,10 @@ public class CitraActivity extends Activity {
         super.onCreate(icicle);
         mView = new CitraView(getApplication());
         setContentView(mView);
+
+        View imgame_overlay = this.getLayoutInflater().inflate(R.layout.ingame_overlay, null,false);
+        this.addContentView(imgame_overlay, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+
     }
 
     @Override protected void onPause() {

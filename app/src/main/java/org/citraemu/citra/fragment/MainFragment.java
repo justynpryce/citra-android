@@ -26,9 +26,6 @@ public class MainFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    private ListView listView;
-    private View view;
-
     public MainFragment() {
         // Required empty public constructor
     }
@@ -42,18 +39,18 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        this.listView = (ListView) view.findViewById(R.id.game_list);
+        ListView listView = (ListView) view.findViewById(R.id.game_list);
 
-        List items = new ArrayList();
+        List<Game> items = new ArrayList<Game>();
         Game game = new Game();
         game.setImage(R.mipmap.ic_launcher);
         game.setTitle("Dumb game object");
         game.setSize(0.0);
         items.add(game);
 
-        this.listView.setAdapter(new GameListAdapter(this.getActivity(), items));
+        listView.setAdapter(new GameListAdapter(this.getActivity(), items));
 
         // Inflate the layout for this fragment
         return view;
