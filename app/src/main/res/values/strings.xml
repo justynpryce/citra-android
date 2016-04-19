@@ -1,34 +1,34 @@
 <resources>
     <string name="app_name">Citra</string>
-    <string name="title_activity_main">Citra</string>
+    <string name="title_activity_main" translatable="false">Citra</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="drawable_title">Citra</string>
-    <string name="drawable_subtitle">Citra Emu</string>
+    <string name="drawable_title" translatable="false">Citra</string>
+    <string name="drawable_subtitle" translatable="false">Citra Emu</string>
     <string name="play">Play</string>
     <string name="icon">Icon</string>
-    <string name="banner_ad_unit_id">ca-app-pub-9704087139792305/7806618673</string>
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-9704087139792305/7806618673</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logo">Logo</string>
-    <string name="version">v.1.0.0.ALPHA</string>
+    <string name="version" translatable="false">v.1.0.0.ALPHA</string>
     <string name="settings_region">Region:</string>
     <string name="menu_games">Games</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_about">About</string>
-    <string name="button_l">L</string>
-    <string name="button_r">R</string>
-    <string name="button_home">Home</string>
-    <string name="button_select">Select</string>
-    <string name="button_start">Start</string>
-    <string name="button_b">B</string>
-    <string name="button_a">A</string>
-    <string name="button_x">X</string>
-    <string name="button_y">Y</string>
+    <string name="button_l" translatable="false">L</string>
+    <string name="button_r" translatable="false">R</string>
+    <string name="button_home" translatable="false">Home</string>
+    <string name="button_select" translatable="false">Select</string>
+    <string name="button_start" translatable="false">Start</string>
+    <string name="button_b" translatable="false">B</string>
+    <string name="button_a" translatable="false">A</string>
+    <string name="button_x" translatable="false">X</string>
+    <string name="button_y" translatable="false">Y</string>
     <string name="button_up">Up</string>
     <string name="button_left">Left</string>
     <string name="button_right">Right</string>
