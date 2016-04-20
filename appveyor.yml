@@ -20,5 +20,8 @@ install:
   - echo y | C:\android-sdk-windows\tools\android.bat update sdk --no-ui --all --filter extra-google-google_play_services
   - echo y | C:\android-sdk-windows\tools\android.bat update sdk --no-ui --all --filter extra-android-support
 build_script:
-  - cd c:\projects\citra-android && gradlew test
+  - cd c:\projects\citra-android
+  - gradlew dependencies
+  - gradlew test
+  - gradlew build
 test: off
