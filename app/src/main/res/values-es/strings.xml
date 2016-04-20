@@ -4,4 +4,5 @@
     <string name="play">Jugar</string>
     <string name="menu_games">Juegos</string>
     <string name="menu_about">Acerca de</string>
+    <string name="menu_settings">Configuración</string>
 </resources>
