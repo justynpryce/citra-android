@@ -41,14 +41,21 @@
     <string name="button_c_stick_left">C-Stick Left</string>
     <string name="button_c_stick_right">C-Stick Right</string>
     <string name="button_c_stick_down">C-Stick Down</string>
-
+    <string name="region_jpn" translatable="false">JPN</string>
+    <string name="region_usa" translatable="false">USA</string>
+    <string name="region_eur" translatable="false">EUR</string>
+    <string name="region_aus" translatable="false">AUS</string>
+    <string name="region_chn" translatable="false">CHN</string>
+    <string name="region_kor" translatable="false">KOR</string>
+    <string name="region_twn" translatable="false">TWN</string>
+    
     <string-array name="region_array">
-        <item>JPN</item>
-        <item>USA</item>
-        <item>EUR</item>
-        <item>AUS</item>
-        <item>CHN</item>
-        <item>KOR</item>
-        <item>TWN</item>
+        <item>@string/region_jpn</item>
+        <item>@string/region_usa</item>
+        <item>@string/region_eur</item>
+        <item>@string/region_aus</item>
+        <item>@string/region_chn</item>
+        <item>@string/region_kor</item>
+        <item>@string/region_twn</item>
     </string-array>
 </resources>
