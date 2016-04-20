@@ -11,7 +11,9 @@ dependencies:
         - echo y | android update sdk --no-ui --all --filter extra-android-support
         - echo y | android update sdk --no-ui --all --filter extra-android-m2repository
         - chmod +x ./gradlew
-        - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
+        - ./gradlew dependencies
+        - ./gradlew test
+        - ./gradlew build
 
 #Pull any submodules
 checkout:

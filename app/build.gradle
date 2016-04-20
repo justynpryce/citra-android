@@ -16,6 +16,7 @@ model {
         ndk {
             moduleName "Citra"
             toolchain "clang"
+            stl "c++_static"
             ldLibs.addAll(["log", "GLESv2"])
         }
 
@@ -37,4 +38,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
     compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.github.bluejamesbond:textjustify-android:2.1.6'
 }

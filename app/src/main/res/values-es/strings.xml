@@ -4,4 +4,24 @@
     <string name="play">Jugar</string>
     <string name="menu_games">Juegos</string>
     <string name="menu_about">Acerca de</string>
+    <string name="menu_settings">Configuración</string>
+    <string name="settings_region">Región:</string>
+    <string name="icon">Icono</string>
+    <string name="navigation_drawer_close">Cerrar barra de navegación</string>
+    <string name="navigation_drawer_open">Abrir barra de navegación</string>
+    <string name="button_up">Arriba</string>
+    <string name="button_right">Derecha</string>
+    <string name="button_left">Izquierda</string>
+    <string name="button_down">Abajo</string>
+    <string name="button_d_pad_down">D-Pad Abajo</string>
+    <string name="button_d_pad_left">D-Pad Izquierda</string>
+    <string name="button_d_pad_right">D-Pad Derecha</string>
+    <string name="button_d_pad_up">D-Pad Arriba</string>
+    <string name="button_touch">Táctil</string>
+    <string name="about_citra_description_part1">Citra es un emulador/debugador experimental de Nintendo 3DS, de código abierto y escrito en C++. </string>
+    <string name="button_c_stick_down">C-Stick Abajo</string>
+    <string name="button_c_stick_left">C-Stick Izquierda</string>
+    <string name="button_c_stick_right">C-Stick Derecha</string>
+    <string name="button_c_stick_up">C-Stick Arriba</string>
+    <string name="about_citra_description_part2">Citra solamente emula una parte del hardware de 3DS, por lo tanto, es generalmente usado para lanzar/debugear aplicaciones caseras. En este momento, Citra es capaz de lanzar varios juegos comerciales! Muchos de esos, no llegan hasta un estado jugable, pero estamos trabajando cada dia para avanzar el proyecto.</string>
 </resources>
