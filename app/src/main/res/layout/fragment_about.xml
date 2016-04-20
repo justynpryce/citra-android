@@ -8,29 +8,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.citraemu.citra.fragment.AboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top">
 
-    <ImageView
-        android:layout_width="123dp"
-        android:layout_height="123dp"
-        android:id="@+id/imageView2"
-        android:layout_gravity="left|top"
-        android:src="@mipmap/ic_launcher"
-        android:contentDescription="@string/logo" />
+        <ImageView
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:id="@+id/citra_logo"
+            android:layout_gravity="left|top"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/logo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal|top" />
+        <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            ext:documentView_text="@string/about_citra_description_part1"
+            ext:documentView_textAlignment="justified"
+            ext:documentView_textColor="@android:color/secondary_text_light"
+            android:id="@+id/description1"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/citra_logo"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/version"
-        android:id="@+id/textView3"
-        android:layout_gravity="right|bottom" />
+            android:layout_above="@+id/version" />
+        <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            ext:documentView_text="@string/about_citra_description_part2"
+            ext:documentView_textAlignment="justified"
+            ext:documentView_textColor="@android:color/secondary_text_light"
+            android:id="@+id/description2"
+            android:layout_below="@+id/citra_logo"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/version" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/version"
+            android:id="@+id/version"
+            android:layout_gravity="right|bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
 
 </FrameLayout>
