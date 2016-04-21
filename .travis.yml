@@ -1,0 +1,25 @@
+os:
+  - osx
+
+language: android
+
+env:
+  - ANDROID_HOME=/usr/local/opt/android-sdk ANDROID_NDK_HOME=/usr/local/Cellar/android-ndk/r11c
+
+install:
+  - brew update > /dev/null # silence the very verbose output
+  - brew install android-sdk android-ndk
+  - echo y | android update sdk --no-ui --all --filter tools
+  - echo y | android update sdk --no-ui --all --filter platform-tools
+  - echo y | android update sdk --no-ui --all --filter build-tools-23.0.3
+  - echo y | android update sdk --no-ui --all --filter android-23
+  - echo y | android update sdk --no-ui --all --filter extra-google-m2repository
+  - echo y | android update sdk --no-ui --all --filter extra-google-google_play_services
+  - echo y | android update sdk --no-ui --all --filter extra-android-support
+  - echo y | android update sdk --no-ui --all --filter extra-android-m2repository
+   
+script:
+  - chmod +x ./gradlew
+  - ./gradlew dependencies
+  - ./gradlew test
+  - ./gradlew build
