@@ -17,7 +17,7 @@ model {
             moduleName "Citra"
             toolchain "clang"
             stl "c++_static"
-            ldLibs.addAll(["log", "GLESv2"])
+            ldLibs.addAll(["atomic", "log", "GLESv2"])
         }
 
         buildTypes {
