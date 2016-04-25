@@ -1,6 +1,21 @@
 apply plugin: 'com.android.model.application'
 
+// Root of 3rd party lib(s): location could be anywhere on the host system
+def lib_distribution_root = '../externals'
 model {
+    repositories {
+        libs(PrebuiltLibraries) {
+            // Configure one pre-built lib: shared
+            iconv {
+                // Inform Android Studio where header file dir for this lib
+                headers.srcDir "${lib_distribution_root}/iconv/include"
+                // Inform Android Studio where lib is -- each ABI should have a lib file
+                binaries.withType(SharedLibraryBinary) {
+                    sharedLibraryFile = file("${lib_distribution_root}/iconv/lib/${targetPlatform.getName()}/libiconv.so")
+                }
+            }
+        }
+    }
     android {
         compileSdkVersion 23
         buildToolsVersion "23.0.3"
@@ -22,6 +37,29 @@ model {
                              '-I' + file('src/main/jni'),
                              '-I' + file('src/main/jni/common'),
                              '-I' + file('src/main/jni/common/logging')])
+        }
+
+        sources {
+            main {
+                jni {
+                    dependencies {
+                        library "iconv" linkage "shared"
+                        // if gperf were *.a, change shared --> static
+                    }
+                }
+                jniLibs {
+                    // for shared lib, lib need to be pushed to the target too
+                    // Once libs are copied into app/src/main/jniLibs directory,
+                    // Android Studio will pack them into APK's lib/ directory
+                    // Here we like to avoid another duplication by pointing
+                    // to the files that containing our libs' distribution location
+                    // so the same file is used by compiler at host, also packed
+                    // into APk to be used at Target (phone/tablet)
+                    source {
+                        srcDir "${lib_distribution_root}/iconv/lib"
+                    }
+                }
+            }
         }
 
         buildTypes {
