@@ -16,8 +16,12 @@ model {
         ndk {
             moduleName "Citra"
             toolchain "clang"
-            stl "c++_static"
+            stl "gnustl_static"
             ldLibs.addAll(["atomic", "log", "GLESv2"])
+            cppFlags.addAll(['-std=c++14',
+                             '-I' + file('src/main/jni'),
+                             '-I' + file('src/main/jni/common'),
+                             '-I' + file('src/main/jni/common/logging')])
         }
 
         buildTypes {
