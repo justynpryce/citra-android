@@ -2,6 +2,7 @@
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
 
+#include <android/log.h>
 #include <array>
 #include <cstdio>
 
@@ -17,6 +18,9 @@
 #include "common/assert.h"
 #include "common/common_funcs.h"
 #include "common/string_util.h"
+
+#define  LOG_TAG    "CITRA"
+#define  LOGI(...)  __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
 
 namespace Log {
 
@@ -58,8 +62,7 @@ void FormatLogMessage(const Entry& entry, char* out_text, size_t text_len) {
 void PrintMessage(const Entry& entry) {
     std::array<char, 4 * 1024> format_buffer;
     FormatLogMessage(entry, format_buffer.data(), format_buffer.size());
-    fputs(format_buffer.data(), stderr);
-    fputc('\n', stderr);
+    LOGI(format_buffer.data());
 }
 
 void PrintColoredMessage(const Entry& entry) {
