@@ -1,3 +1,6 @@
 [submodule "externals/iconv"]
 	path = externals/iconv
 	url = https://github.com/Kloen/libiconv-android.git
+[submodule "externals/soundtouch"]
+	path = externals/soundtouch
+	url = https://github.com/Kloen/soundtouch-android.git
