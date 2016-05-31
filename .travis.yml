@@ -8,6 +8,7 @@ env:
 
 before_install:
   # Travis doesn't let us select the JDK version on OS X.  Force it ourselves.
+  - chmod +x ./ci/install-osx-jdk8.sh
   - ./ci/install-osx-jdk8.sh
 
 install:
