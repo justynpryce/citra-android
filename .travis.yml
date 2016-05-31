@@ -6,6 +6,11 @@ language: android
 env:
   - ANDROID_HOME=/usr/local/opt/android-sdk ANDROID_NDK_HOME=/usr/local/Cellar/android-ndk/r11c
 
+before_install:
+  # Travis doesn't let us select the JDK version on OS X.  Force it ourselves.
+  - chmod +x ./ci/install-osx-jdk8.sh
+  - ./ci/install-osx-jdk8.sh
+
 install:
   - brew update > /dev/null # silence the very verbose output
   - brew install android-sdk android-ndk

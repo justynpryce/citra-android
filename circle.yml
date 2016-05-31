@@ -1,3 +1,10 @@
+## Customize the test machine
+machine:
+  # Version of java to use
+  java:
+    version:
+      oraclejdk8
+
 #Install android build tools, platforms
 #Supported versions here https://circleci.com/docs/android
 dependencies:
